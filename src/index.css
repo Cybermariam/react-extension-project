@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+:root {
+  --bg: #ffffff;
+  --text: hsl(226, 25%, 17%);
+  --surface: hsl(0, 0%, 93%);
+  --nav: hsl(0, 0%, 93%); /* Or a custom light gray */
+}
+
+.dark {
+  --bg: hsl(227, 75%, 14%);
+  --text: hsl(200, 60%, 99%);
+  --surface: hsl(225, 23%, 24%); /* Neutral 700 for Cards */
+  --nav: hsl(226, 11%, 37%); /* Neutral 700 for Navbar */
+}
+
+@layer base {
+  html {
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  .btn {
+    @apply px-8 py-2 rounded-full;
+  }
+}
+
+/* - **Neutral 800**: `hsl(226, 25%, 17%)`
+- **Neutral 700**: `hsl(225, 23%, 24%)`
+- **Neutral 600**: `hsl(226, 11%, 37%)`
+- **Neutral 300**: `hsl(0, 0%, 78%)`
+- **Neutral 200**: `hsl(217, 61%, 90%)`
+- **Neutral 100**: `hsl(0, 0%, 93%)`
+- **Neutral 0**: `hsl(200, 60%, 99%)`
+
+### Red
+
+- **Red 400**: `hsl(3, 86%, 64%)`
+- **Red 500**: `hsl(3, 71%, 56%)`
+- **Red 700**: `hsl(3, 77%, 44%)` */
