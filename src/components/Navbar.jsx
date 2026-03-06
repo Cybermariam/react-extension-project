@@ -10,12 +10,11 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    isDarkMode
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
   }, [isDarkMode]);
+
   return (
     <nav className="flex justify-between items-center px-6 py-3 rounded-xl shadow bg-(--nav)">
       <div>

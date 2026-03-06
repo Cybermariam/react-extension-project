@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import data from "../data.json";
 
-const ExtensionList = () => {
+const ExtensionList = ({ extensions, onRemove }) => {
   const [filterType, setFilterType] = useState("all");
-  const [extensions, setExtensions] = useState(data);
 
   const filteredData = extensions.filter((item) => {
     if (filterType === "active") return item.isActive;
     if (filterType === "inactive") return !item.isActive;
     return true;
   });
-  const handleRemove = (name) => {
-    setExtensions((prev) =>
-      prev.filter((extension) => extension.name !== name),
-    );
-  };
 
   return (
     <>
@@ -52,7 +45,7 @@ const ExtensionList = () => {
             description={extension.description}
             name={extension.name}
             isActive={extension.isActive}
-            onRemove={handleRemove}
+            onRemove={onRemove}
           />
         ))}
       </div>
