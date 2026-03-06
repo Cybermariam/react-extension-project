@@ -37,24 +37,26 @@ const App = () => {
   return (
     <div className="px-12 py-6 bg-(--bg) text-(--text) dark:text-(--text) dark:bg-(--bg) min-h-screen">
       <Navbar />
-      <div className="my-6 flex gap-2">
+      <div className="my-6 flex flex-col md:flex-row gap-2">
         <input
           type="text"
           placeholder="Extension Name"
           value={inputName}
           onChange={(e) => setInputName(e.target.value)}
-          className="border px-2 py-1 rounded"
+          className="border px-2 py-2 rounded w-full"
         />
+
         <input
           type="text"
           placeholder="Description (optional)"
           value={inputDesc}
           onChange={(e) => setInputDesc(e.target.value)}
-          className="border px-2 py-1 rounded"
+          className="border px-2 py-2 rounded w-full"
         />
+
         <button
           onClick={handleAdd}
-          className="bg-red-500 text-white px-4 py-1 rounded"
+          className="bg-red-500 text-white px-4 py-2 rounded md:w-auto w-full"
         >
           Add Extension
         </button>
